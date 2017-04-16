@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F3BEDC7B1EA3D54B009E0356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDC7A1EA3D54B009E0356 /* AppDelegate.swift */; };
-		F3BEDC7D1EA3D54B009E0356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDC7C1EA3D54B009E0356 /* ViewController.swift */; };
 		F3BEDC801EA3D54B009E0356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BEDC7E1EA3D54B009E0356 /* Main.storyboard */; };
 		F3BEDC821EA3D54B009E0356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BEDC811EA3D54B009E0356 /* Assets.xcassets */; };
 		F3BEDC851EA3D54B009E0356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3BEDC831EA3D54B009E0356 /* LaunchScreen.storyboard */; };
 		F3BEDC901EA3D54B009E0356 /* MVVM_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDC8F1EA3D54B009E0356 /* MVVM_ExampleTests.swift */; };
 		F3BEDC9B1EA3D54B009E0356 /* MVVM_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDC9A1EA3D54B009E0356 /* MVVM_ExampleUITests.swift */; };
+		F3BEDCA91EA3D560009E0356 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDCA81EA3D560009E0356 /* Car.swift */; };
+		F3BEDCAB1EA3D5C5009E0356 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDCAA1EA3D5C5009E0356 /* CarViewModel.swift */; };
+		F3BEDCAD1EA3DD2D009E0356 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BEDCAC1EA3DD2D009E0356 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F3BEDC771EA3D54B009E0356 /* MVVM-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BEDC7A1EA3D54B009E0356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3BEDC7C1EA3D54B009E0356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3BEDC7F1EA3D54B009E0356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3BEDC811EA3D54B009E0356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3BEDC841EA3D54B009E0356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		F3BEDC961EA3D54B009E0356 /* MVVM-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3BEDC9A1EA3D54B009E0356 /* MVVM_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ExampleUITests.swift; sourceTree = "<group>"; };
 		F3BEDC9C1EA3D54B009E0356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BEDCA81EA3D560009E0356 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		F3BEDCAA1EA3D5C5009E0356 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		F3BEDCAC1EA3DD2D009E0356 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				F3BEDC7A1EA3D54B009E0356 /* AppDelegate.swift */,
-				F3BEDC7C1EA3D54B009E0356 /* ViewController.swift */,
 				F3BEDC7E1EA3D54B009E0356 /* Main.storyboard */,
 				F3BEDC811EA3D54B009E0356 /* Assets.xcassets */,
 				F3BEDC831EA3D54B009E0356 /* LaunchScreen.storyboard */,
 				F3BEDC861EA3D54B009E0356 /* Info.plist */,
+				F3BEDCA81EA3D560009E0356 /* Car.swift */,
+				F3BEDCAA1EA3D5C5009E0356 /* CarViewModel.swift */,
+				F3BEDCAC1EA3DD2D009E0356 /* TableViewController.swift */,
 			);
 			path = "MVVM-Example";
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3BEDC7D1EA3D54B009E0356 /* ViewController.swift in Sources */,
 				F3BEDC7B1EA3D54B009E0356 /* AppDelegate.swift in Sources */,
+				F3BEDCA91EA3D560009E0356 /* Car.swift in Sources */,
+				F3BEDCAD1EA3DD2D009E0356 /* TableViewController.swift in Sources */,
+				F3BEDCAB1EA3D5C5009E0356 /* CarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
